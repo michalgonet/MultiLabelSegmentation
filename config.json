@@ -1,0 +1,7 @@
+{
+  "Paths": {
+    "training_data": "data/imagesTr",
+    "training_labels": "data/labelsTr",
+    "test_data": "data/Ts"
+  }
+}
