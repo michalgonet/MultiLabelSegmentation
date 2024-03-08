@@ -7,6 +7,8 @@ from analysis.config import get_config
 from classes import Flag
 from log_util import basic_log_config
 
+from analysis.training import training
+
 
 @click.command()
 @click.option('--config-path', type=click.Path(exists=True, dir_okay=False, path_type=Path), default='config.json',
@@ -17,11 +19,12 @@ def main(config_path: str, flag: Flag):
     config = get_config(config_path)
 
     if flag == Flag.prepare_data.name:
-        logging.info(f'Start data preparation')
+        logging.info('Start data preparation')
     elif flag == Flag.training.name:
-        logging.info(f'Start training')
+        logging.info('Start training')
+        training(config)
     elif flag == Flag.testing.name:
-        logging.info(f'Start testing')
+        logging.info('Start testing')
     else:
         raise KeyError(f'Wrong flag {flag}')
 
