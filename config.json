@@ -3,5 +3,28 @@
     "training_data": "data/imagesTr",
     "training_labels": "data/labelsTr",
     "test_data": "data/Ts"
+  },
+  "Augmentation": {
+    "rand_flip_prob": 0.5,
+    "rand_scale_intensity": [
+      0.1,
+      1.0
+    ],
+    "rand_shift_intensity": [
+      0.1,
+      1.0
+    ]
+  },
+  "Data": {
+    "roi_size": [
+      224,
+      224,
+      144
+    ],
+    "spacing": [
+      1.0,
+      1.0,
+      1.0
+    ]
   }
 }
